@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Personal Portfolio">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #555;
+            border-radius: 5px;
+        }
+        .nav a:hover {
+            background-color: #777;
+        }
+        section {
+            padding: 60px 20px;
+            margin: 20px 0;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .about, .skills, .projects, .testimonials, .contact {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .skills ul, .projects .grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .skills li, .projects .grid-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+        }
+        .projects .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .testimonials blockquote {
+            font-style: italic;
+            background-color: #eaeaea;
+            padding: 20px;
+            border-left: 5px solid #333;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+        <div class="nav">
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hi, I’m John Doe, a passionate web developer with over 5 years of experience in creating beautiful and functional websites. I specialize in front-end development, but I also have experience with back-end technologies. I love solving complex problems and bringing ideas to life through code.</p>
+        <img src="profile.jpg" alt="John Doe" style="width: 200px; height: auto; border-radius: 50%; display: block; margin: 20px auto;">
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>HTML5</strong> - Building the structure of websites with clean, semantic HTML.</li>
+            <li><strong>CSS3</strong> - Styling and creating responsive, attractive designs.</li>
+            <li><strong>JavaScript</strong> - Making websites interactive and dynamic.</li>
+            <li><strong>React.js</strong> - Building modern user interfaces with React.</li>
+            <li><strong>Node.js</strong> - Back-end development and API creation with Node.js.</li>
+            <li><strong>Git</strong> - Version control and collaborative development with Git.</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A responsive e-commerce website built with React and Node.js.</p>
+            </div>
+            <div class="grid-item">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>A personal blog built with a custom CMS using PHP and MySQL.</p>
+            </div>
+            <div class="grid-item">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A portfolio website built with HTML, CSS, and JavaScript to showcase my work.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What People Say</h2>
+        <blockquote>
+            "John was a pleasure to work with. He helped us design and implement a stunning website for our business. His attention to detail and ability to understand our needs made the entire process smooth and efficient."
+            <footer>- Sarah Williams, CEO of Tech Corp</footer>
+        </blockquote>
+        <blockquote>
+            "I worked with John on several projects, and he is always reliable, knowledgeable, and hardworking. His technical skills and passion for development are unmatched."
+            <footer>- David Brown, Lead Developer at Web Solutions</footer>
+        </blockquote>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 John Doe | All rights reserved</p>
+    </footer>
+
+</body>
+</html>
