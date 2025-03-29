@@ -31,6 +31,7 @@
 
         header h1 {
             margin: 0;
+            font-size: 2em;
         }
 
         .nav {
@@ -159,13 +160,12 @@
         }
 
         .projects .grid-item {
-			background-color: #eaeaea;
-			padding: 20px;
-			border-radius: 5px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			width: 30%;
-		}
-
+            background-color: #eaeaea;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+        }
 
         /* Testimonials Section */
         .testimonials blockquote {
@@ -206,6 +206,51 @@
 
         .contact button:hover {
             background-color: #555;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .nav {
+                flex-direction: column;
+            }
+
+            .skills-section {
+                padding: 15px;
+            }
+
+            .skills-section .skill-container {
+                grid-template-columns: 1fr;
+            }
+
+            .projects .grid-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .about img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .contact input,
+            .contact textarea {
+                width: 90%;
+            }
+
+            .contact button {
+                width: 90%;
+            }
+        }
+
+        /* Desktop Responsiveness */
+        @media (min-width: 769px) {
+            .projects .grid-item {
+                width: 30%;
+            }
         }
     </style>
 </head>
