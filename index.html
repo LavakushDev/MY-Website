@@ -6,9 +6,11 @@
     <meta name="description" content="My Personal Portfolio">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Adding Montserrat font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif; /* Updated font-family */
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -40,7 +42,7 @@
             background-color: #777;
         }
         section {
-            padding: 60px 20px;
+            padding: 0px 20px;
             margin: 20px 0;
         }
         section h2 {
@@ -82,6 +84,57 @@
             padding: 10px 0;
             text-align: center;
         }
+
+        /* New styles for the skills section with graphical progress bars */
+        .skills-section {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #eaeaea;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill {
+            margin: 15px 0;
+        }
+
+        .skill-name {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 25px;
+            text-align: center;
+            color: white;
+            line-height: 25px;
+            border-radius: 5px;
+        }
+
+        .python { background-color: #4CAF50; width: 75%; }
+        .windows { background-color: #2196F3; width: 90%; }
+        .arcgis { background-color: #FF9900; width: 80%; }
+        .powerbi { background-color: #fad25a; width: 85%; }
+        .html { background-color: #F44336; width: 60%; }
+        .github { background-color: #333; width: 65%; }
+        .fme { background-color: #2041c9; width: 85%; }
+        .r { background-color: #7A5A4F; width: 70%; }
+        .sql { background-color: #326CE5; width: 75%; }
+
+        .skill-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
     </style>
 </head>
 <body>
@@ -102,19 +155,79 @@
         <p>I am a dedicated and highly skilled Data Analyst with a strong focus on Geographic Information Systems (GIS). With a solid background in geospatial data management, analysis, and visualization, I specialize in transforming complex datasets into clear, actionable insights that support strategic decision-making across a variety of industries, including local government, consultancy, and engineering.</p>
         <p>My expertise includes advanced GIS tools and technologies, such as SQL, FME, Python, and R, which I leverage to integrate, analyze, and automate geospatial data processes. Whether it’s creating detailed maps, optimizing workflows, or ensuring data integrity, my goal is always to provide high-quality, data-driven solutions that drive operational efficiency and mitigate risk.</p>
         <p>I’m passionate about using GIS to solve real-world problems and deliver impactful results. I thrive in collaborative environments, working closely with teams to implement innovative solutions that improve decision-making and streamline data processes. My approach is always detail-oriented, ensuring that every project I undertake is delivered with precision and accuracy.</p>
-        <img src="https://raw.githubusercontent.com/LavakushDev/MY-Website/master/Edited-132.jpg" alt="Lavakush" style="width: 200px; height: auto; border-radius: 50%; display: block; margin: 20px auto;">
+        <img src="https://raw.githubusercontent.com/LavakushDev/MY-Website/master/Edited-132.jpg" alt="Lavakush" style="width: 300px; height: 300px; border-radius: 50%; display: block; margin: 20px auto; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;" />
     </section>
 
     <section id="skills" class="skills">
         <h2>Skills</h2>
-        <ul>
-            <li><strong>HTML5</strong> - Building the structure of websites with clean, semantic HTML.</li>
-            <li><strong>CSS3</strong> - Styling and creating responsive, attractive designs.</li>
-            <li><strong>JavaScript</strong> - Making websites interactive and dynamic.</li>
-            <li><strong>React.js</strong> - Building modern user interfaces with React.</li>
-            <li><strong>Node.js</strong> - Back-end development and API creation with Node.js.</li>
-            <li><strong>Git</strong> - Version control and collaborative development with Git.</li>
-        </ul>
+        <div class="skills-section">
+            <div class="skill-container">
+
+                <div class="skill">
+                    <div class="skill-name">Python</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar python">75%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">ESRI ArcGIS</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar arcgis">80%</div>
+                    </div>
+                </div>
+				
+				<div class="skill">
+                    <div class="skill-name">Power Bi</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar powerbi">85%</div>
+                    </div>
+                </div>
+				
+				<div class="skill">
+                    <div class="skill-name">FME</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar fme">85%</div>
+                    </div>
+                </div>
+				
+				<div class="skill">
+                    <div class="skill-name">SQL</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar sql">75%</div>
+                    </div>
+                </div>
+				
+				<div class="skill">
+                    <div class="skill-name">Git Hub</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar github">65%</div>
+                    </div>
+                </div>
+				
+				<div class="skill">
+                    <div class="skill-name">R</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar r">70%</div>
+                    </div>
+                </div>
+				
+				<div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar html">60%</div>
+                    </div>
+                </div>
+				
+				<div class="skill">
+                    <div class="skill-name">Windows</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar windows">90%</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
     <section id="projects" class="projects">
