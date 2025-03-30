@@ -22,8 +22,7 @@
             font-size: 16px;
         }
 
-        header,
-        footer {
+        header, footer {
             background-color: #333;
             color: white;
             text-align: center;
@@ -32,7 +31,7 @@
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 1.3em;
         }
 
         .nav {
@@ -60,15 +59,11 @@
 
         h2 {
             text-align: center;
-            font-size: 2.5em;
+            font-size: 1.3em;
             margin-bottom: 20px;
         }
 
-        .about,
-        .skills,
-        .projects,
-        .testimonials,
-        .contact {
+        .about, .skills, .projects, .contact {
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
@@ -78,11 +73,9 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            display: block;
             margin: 20px auto;
             object-fit: cover;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
         }
 
         .about .personal-info p {
@@ -153,14 +146,6 @@
         }
 
         .projects .grid-item {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 30%;
-        }
-
-        .projects .grid-item {
             background-color: #eaeaea;
             padding: 20px;
             border-radius: 5px;
@@ -168,14 +153,12 @@
             width: 30%;
         }
 
-        /* Testimonials Section */
-        .testimonials blockquote {
-            font-style: italic;
-            background-color: #eaeaea;
-            padding: 20px;
-            border-left: 5px solid #333;
-            margin-bottom: 20px;
-            font-size: 1.1em;
+        .projects .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* Contact Section */
@@ -186,8 +169,7 @@
             align-items: center;
         }
 
-        .contact input,
-        .contact textarea {
+        .contact input, .contact textarea {
             padding: 10px;
             width: 80%;
             max-width: 500px;
@@ -238,16 +220,11 @@
                 padding: 15px;
             }
 
-            .skill-name {
-                font-size: 1.1em;
-            }
-
             .projects .grid-item {
                 width: 45%;
             }
 
-            .contact input,
-            .contact textarea {
+            .contact input, .contact textarea {
                 width: 90%;
             }
 
@@ -273,8 +250,7 @@
                 width: 100%;
             }
 
-            .contact input,
-            .contact textarea {
+            .contact input, .contact textarea {
                 width: 95%;
             }
 
@@ -287,10 +263,12 @@
 
 <body>
     <header>
-        <h1>Welcome!</h1>
+        <h1></h1>
     </header>
 
     <section id="about" class="about">
+		<p><i>Designing with Purpose, Building with Passion</i></p>
+		<h2></h2>
         <h2>About Me</h2>
         <p>I am a dedicated and highly skilled Data Analyst with a strong focus on Geographic Information Systems (GIS). I specialize in transforming complex datasets into clear, actionable insights.</p>
         <img src="https://raw.githubusercontent.com/LavakushDev/MY-Website/master/Edited-132.jpg" alt="Lavakush">
@@ -323,43 +301,31 @@
         <h2>Projects</h2>
         <div class="grid">
             <div class="grid-item">
-                <img src="project1.jpg" alt="Project 1">
+                <img src="https://raw.githubusercontent.com/LavakushDev/MY-Website/master/Project1.jpg" alt="Project 1">
                 <h3>Project 1</h3>
-                <p>A responsive e-commerce website built with React and Node.js.</p>
+                <p>An automated PDF response of BYDA Request built with Python and ArcGIS.</p>
             </div>
             <div class="grid-item">
-                <img src="project2.jpg" alt="Project 2">
+                <img src="https://raw.githubusercontent.com/LavakushDev/MY-Website/master/Project2.jpg" alt="Project 2">
                 <h3>Project 2</h3>
-                <p>A personal blog built with a custom CMS using PHP and MySQL.</p>
+                <p>A Tourism Map of Kalgoorlie created using ArcGIS and the ESRI Geodatabase.</p>
             </div>
             <div class="grid-item">
-                <img src="project3.jpg" alt="Project 3">
+                <img src="https://raw.githubusercontent.com/LavakushDev/MY-Website/master/Project3.jpg" alt="Project 3">
                 <h3>Project 3</h3>
-                <p>A portfolio website built with HTML, CSS, and JavaScript to showcase my work.</p>
+                <p>A automated PDF Report using ArcGIS Survey123 Python and ESRI Geodatabase.</p>
+            </div>
+			<div class="grid-item">
+                <img src="https://raw.githubusercontent.com/LavakushDev/MY-Website/master/Project4.png" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A portfolio website built with HTML and CSS to showcase my work.</p>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="testimonials">
-        <h2>What People Say</h2>
-        <blockquote>
-            "John was a pleasure to work with. He helped us design and implement a stunning website for our business. His attention to detail and ability to understand our needs made the entire process smooth and efficient."
-            <footer>- Sarah Williams, CEO of Tech Corp</footer>
-        </blockquote>
-        <blockquote>
-            "I worked with John on several projects, and he is always reliable, knowledgeable, and hardworking."
-            <footer>- David Brown, Lead Developer at Web Solutions</footer>
-        </blockquote>
-    </section>
-
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <form action="submit_form.php" method="post">
-            <input type="text" id="name" name="name" placeholder="Name" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <textarea id="message" name="message" placeholder="Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        
     </section>
 
     <footer>
